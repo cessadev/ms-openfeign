@@ -1,10 +1,9 @@
 package com.microservice.project.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Table;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
@@ -12,6 +11,7 @@ import org.springframework.data.annotation.Id;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 @Entity
 @Table(name = "project")
 public class Project {
@@ -22,10 +22,9 @@ public class Project {
 
     private String name;
     private String description;
-    private String startDate;
-    private String expectedEndDate;
-    private String status;
-    private Long creatorUserId;
-    private String creationDate;
-    private String lastUpdatedDate;
+
+    @ManyToOne
+    @JoinColumn(name = "id_user", nullable = false)
+    @JsonIgnore
+    private Long user;
 }
