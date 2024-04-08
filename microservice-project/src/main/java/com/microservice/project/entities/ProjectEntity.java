@@ -1,6 +1,5 @@
 package com.microservice.project.entities;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -14,7 +13,7 @@ import org.springframework.data.annotation.Id;
 @Builder
 @Entity
 @Table(name = "project")
-public class Project {
+public class ProjectEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,9 +21,4 @@ public class Project {
 
     private String name;
     private String description;
-
-    @ManyToOne
-    @JoinColumn(name = "id_user", nullable = false)
-    @JsonIgnore
-    private Long user;
 }

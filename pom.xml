@@ -24,6 +24,7 @@
     <module>microservice-config</module>
     <module>microservice-user</module>
     <module>microservice-project</module>
+    <module>microservice-proxy-user-project</module>
   </modules>
 
   <properties>
