@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/user")
+@RequestMapping("/api/user-project")
 public class UserProxyController {
     @Autowired
     private UserProxyService userProxyService;

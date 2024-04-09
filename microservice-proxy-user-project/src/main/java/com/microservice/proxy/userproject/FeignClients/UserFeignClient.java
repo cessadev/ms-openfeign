@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.List;
 
-@FeignClient(name = "msvc-user", url = "localhost:8081/api/user")
+@FeignClient(name = "msvc-user", url = "localhost:8080/api/user")
 public interface UserFeignClient {
     @GetMapping("/search-users-by-project/{projectId}")
     List<UserDTO> findUsersByProject(@PathVariable Long projectId);
