@@ -43,9 +43,14 @@ public class UserController {
         }
     }
 
-    @GetMapping("/search-users-by-project/{id}")
-    public ResponseEntity<?> findUsersByProject(@PathVariable Long projectId) {
+    @GetMapping("/search-users-by-project/{projectId}")
+    public ResponseEntity<?> findAllUsersByProject(@PathVariable Long projectId) {
         return ResponseEntity.ok(userService.findUsersByProjectId(projectId));
+    }
+
+    @GetMapping("/find-projectid-by-user/{userId}")
+    public ResponseEntity<?> findProjectIdByUser(@PathVariable Long userId) {
+        return ResponseEntity.ok(userService.findProjectIdByUserId(userId));
     }
 
     @PostMapping("/saveUser")

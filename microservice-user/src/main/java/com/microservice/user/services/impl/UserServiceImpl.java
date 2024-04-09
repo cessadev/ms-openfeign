@@ -38,4 +38,9 @@ public class UserServiceImpl implements IUserService {
     public List<UserEntity> findUsersByProjectId(Long projectId) {
         return userDAO.findUsersByProjectId(projectId);
     }
+
+    @Override
+    public Long findProjectIdByUserId(Long userId) {
+        return userDAO.findProjectIdByUserId(userId);
+    }
 }

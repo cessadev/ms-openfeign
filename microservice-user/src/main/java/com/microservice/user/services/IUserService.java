@@ -11,4 +11,5 @@ public interface IUserService {
     void saveUser(UserEntity user);
     void deleteUser(Long id);
     List<UserEntity> findUsersByProjectId(Long projectId);
+    Long findProjectIdByUserId(Long userId);
 }

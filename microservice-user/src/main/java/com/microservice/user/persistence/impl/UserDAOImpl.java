@@ -32,4 +32,9 @@ public class UserDAOImpl implements IUserDAO {
 
     @Override
     public List<UserEntity> findUsersByProjectId(Long projectId) { return userRepository.findUsersByProjectId(projectId); }
+
+    @Override
+    public Long findProjectIdByUserId(Long userId) {
+        return userRepository.findProjectIdByUserId(userId);
+    }
 }

@@ -2,6 +2,10 @@ server:
   port: 8083
 
 spring:
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+  datasource:
+    url: none
   application:
     name: msvc-proxy-userproject
   config:

@@ -11,4 +11,7 @@ import java.util.List;
 public interface UserRepository extends JpaRepository<UserEntity, Long> {
     @Query("SELECT u FROM UserEntity u WHERE u.projectId = :projectId")
     List<UserEntity> findUsersByProjectId(Long projectId);
+
+    @Query("SELECT u.projectId FROM UserEntity u WHERE u.id = :userId")
+    Long findProjectIdByUserId(Long userId);
 }
