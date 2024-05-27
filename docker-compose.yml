@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  ### MySQL database for mcsv-user
+  mcsv-user:
+    container_name: mcsv-user
+    image: mysql:8.4.0
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'db_user'
+      MYSQL_PASSWORD: 'root'
+      MYSQL_ROOT_PASSWORD: 'root'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  ### Postgres database for mcsv-project
+  mcsv-project:
+    container_name: mcsv-project
+    image: postgres:16-alpine3.19
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: db_project
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    ports:
+      - 5432:5432
+    expose:
+      - 5432
+    command: -p 5432
+
+volumes:
+  mysql_data:
