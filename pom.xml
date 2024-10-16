@@ -19,12 +19,12 @@
   <packaging>pom</packaging>
 
   <modules>
-    <module>microservice-gateway</module>
-    <module>microservice-eureka</module>
-    <module>microservice-config</module>
-    <module>microservice-user</module>
-    <module>microservice-project</module>
-    <module>microservice-proxy-user-project</module>
+    <module>ms-gateway</module>
+    <module>ms-eureka</module>
+    <module>ms-config</module>
+    <module>ms-user</module>
+    <module>ms-project</module>
+    <module>ms-proxy</module>
   </modules>
 
   <properties>
