@@ -17,20 +17,5 @@ services:
     volumes:
       - mysql_data:/var/lib/mysql
 
-  ### Postgres database for mcsv-project
-  mcsv-project:
-    container_name: mcsv-project
-    image: postgres:16-alpine3.19
-    restart: unless-stopped
-    environment:
-      POSTGRES_DB: db_project
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: password
-    ports:
-      - 5432:5432
-    expose:
-      - 5432
-    command: -p 5432
-
 volumes:
   mysql_data:
