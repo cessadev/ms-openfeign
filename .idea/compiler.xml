@@ -8,11 +8,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="microservice-gateway" />
+        <module name="microservice-proxy" />
         <module name="microservice-project" />
         <module name="microservice-user" />
         <module name="microservice-eureka" />
         <module name="microservice-config" />
-        <module name="microservice-proxy-user-project" />
       </profile>
     </annotationProcessing>
   </component>
@@ -22,7 +22,7 @@
       <module name="microservice-eureka" options="-parameters" />
       <module name="microservice-gateway" options="-parameters" />
       <module name="microservice-project" options="-parameters" />
-      <module name="microservice-proxy-user-project" options="-parameters" />
+      <module name="microservice-proxy" options="-parameters" />
       <module name="microservice-user" options="-parameters" />
     </option>
   </component>
