@@ -15,8 +15,12 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/api/project")
 public class ProjectController {
-    @Autowired
-    private IProjectService projectService;
+
+    private final IProjectService projectService;
+
+    public ProjectController(IProjectService projectService) {
+        this.projectService = projectService;
+    }
 
     @GetMapping("/findAllProjects")
     public ResponseEntity<?> findAllProjects() {
