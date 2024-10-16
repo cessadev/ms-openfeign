@@ -10,7 +10,7 @@
 	</parent>
 
 	<groupId>com.microservice.project</groupId>
-	<artifactId>ms-project</artifactId>
+	<artifactId>microservice-project</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
 	<name>microservice-project</name>
